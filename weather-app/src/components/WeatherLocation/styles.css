@@ -5,15 +5,34 @@
   padding-left: 10px;
   color:#888;
   line-height: 35px;
+  overflow: auto;
 }
 
 .locationCont h1 {
   margin: 0;
+  white-space: nowrap;
 }
 
 .weatherLocationCont {
-  width: 400px;
-  padding: 15px;
+  width: calc(100%-20px);
+  margin: 0 10px;
+  padding: 25px;
+  min-width: 350px;
+  box-sizing: border-box;
   font-family: "Roboto",sans-serif;
   box-shadow: 10px 10px 40px -12px black;
+}
+
+@media (max-width:64em) {
+  .locationCont {
+    max-height: 30vh;
+    overflow: auto;
+    margin-bottom: 20px;
+  }
+}
+
+.forecast-title {
+  color:white;
+  text-align: center;
+  padding: 15px 0;
 }

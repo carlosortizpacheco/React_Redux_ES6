@@ -8,6 +8,7 @@ import CircularProgress from "@material-ui/core/CircularProgress"
 import PropTypes from "prop-types"
 
 
+
 class WeatherLocation extends Component {
 
   constructor (props) {
@@ -41,8 +42,9 @@ class WeatherLocation extends Component {
 
   render() {
     const {city,data} =this.state
+    const {onWeatherLocationClick}=this.props
     return (
-      <div className="weatherLocationCont">
+      <div className="weatherLocationCont" onClick={onWeatherLocationClick}>
       <Location city={city}/>
       {data
         ? 
@@ -57,6 +59,7 @@ class WeatherLocation extends Component {
 
 WeatherLocation.propTypes = {
   city:PropTypes.string.isRequired,
+  onWeatherLocationClick:PropTypes.func,
 }
 
 export default WeatherLocation
