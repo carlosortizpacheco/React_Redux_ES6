@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  margin-top: 60px;
 }
 
 .App-logo {
@@ -32,9 +33,17 @@
   }
 }
 
-
 .details {
   background: #999;
   height: 100vh;
-  width: 100%;
+  width: calc(100%-40px);
+  overflow: auto;
+  padding: 0 20px;
+  margin-top:50px;
+}
+
+@media (max-width:64em) {
+  .details {
+    height: 50vh;
+  }
 }
